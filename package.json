@@ -1,7 +1,7 @@
 {
-  "name": "get_items_on_login_website",
+  "name": "restful-with-google-cloud-functions-and-puppeteer",
   "version": "1.0.0",
-  "description": "Get items on login website by puppeteer.",
+  "description": "RESTful api to get items on login website with google cloud functions and puppeteer.",
   "main": "index.js",
   "dependencies": {
     "@google-cloud/functions-emulator": "^1.0.0-beta.6",
