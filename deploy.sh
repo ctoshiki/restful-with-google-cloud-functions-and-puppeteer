@@ -1,12 +1,12 @@
 #!/usr/bin/bash 
 
-$DEPLOY_DIR=deploy
+DEPLOY_DIR=deploy
 
-if [! -e $DEPLOY_DIR ]; then
+if [ ! -e $DEPLOY_DIR ]; then
   mkdir $DEPLOY_DIR
 fi
 
-cp index.js package.json $DEPLOY_DIR
+cp index.js package.json .env $DEPLOY_DIR
 cd $DEPLOY_DIR
 
-gcloud beta functions deploy items --entry-point=run --env-vars-file=.env --runtime nodejs10 --trigger-http
+gcloud beta functions deploy items --entry-point=run --runtime=nodejs10 --trigger-http
